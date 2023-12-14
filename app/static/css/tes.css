@@ -1,0 +1,320 @@
+/* Tambahkan gaya CSS untuk membuat navbar berjarak dan berada di tengah */
+.navbar {
+    background-color: #087C37;
+}
+
+.navbar-brand img {
+    width: 130px;
+    height: 50px;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    /* Membuat navbar terpusat */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    /* Mengubah warna teks item navbar menjadi putih */
+}
+
+.nav-item {
+    margin: 0 15px;
+    /* Menambahkan jarak antara item navbar */
+}
+
+.nav-item a.nav-link[href="#FAQ"] {
+    color: white !important;
+    /* Mengubah warna teks item "FAQ" menjadi putih */
+}
+
+.btn {
+    border-radius: 50px;
+    color: #ffffff;
+}
+
+.nav-link-login {
+    font-size: 20px;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.nav.openSearch .nav-links a {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav .search-icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav .search-box {
+    position: absolute;
+    right: 250px;
+    height: 45px;
+    max-width: 555px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s linear;
+}
+
+.nav.openSearch .search-box {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    left: 15px;
+    color: #4a98f7;
+    transform: translateY(-50%);
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0 15px 0 45px;
+}
+
+.nav .navOpenBtn,
+.nav .navCloseBtn {
+    display: none;
+}
+
+
+/* BLOCK CONTENT HOME */
+
+.background-hero {
+    background-image: url('/static/img/background.png');
+    background-size: cover;
+    position: relative;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-hero {
+    float: right;
+    width: 45%;
+    padding-top: 8%;
+}
+
+.content h2 {
+    max-width: 52%;
+    margin-top: 12%;
+    color: #1E1E1E;
+    font-size: 50px;
+    font-weight: 800;
+    word-wrap: break-word;
+}
+
+.text-kredit {
+    color: #1E1E1E;
+    font-size: 16px;
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+.text-kk-isi {
+    color: #1E1E1E;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.hero-btn {
+    justify-content: space-between;
+}
+
+.hero-btn-login {
+    border-radius: 50px;
+    color: black;
+    background-color: #F3C623;
+    width: 10%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.hero-btn-login.clicked {
+    background-color: rgb(185, 60, 41);
+}
+
+.hero-btn-login:hover {
+    background-color: #33f00d;
+}
+
+.hero-btn-signup {
+    outline: 0 !important;
+    border: none;
+    background: none;
+    color: black;
+    margin-left: 3%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.hero-btn-signup:active .hero-btn-signup:focus {
+    outline: 0 !important;
+    border: none;
+    background: none;
+}
+
+.sect-box {
+    display: block;
+    background-color: #087C37;
+    border-top-right-radius: 90px;
+    border-top-left-radius: 90px;
+    margin-top: 10%;
+    justify-content: space-between;
+}
+
+.hero-siapakah  {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.siapakah-kami{
+    width: 40%;
+    flex-grow: 1;
+}
+
+.hero-siapakah .siapakah-kami h2 {
+    padding-top: 12%;
+    color: #F4F6FF;
+    font-size: 36px;
+    font-family: Poppins;
+    font-weight: 700;
+    letter-spacing: 1.44px;
+    word-wrap: break-word;
+}
+
+.hero-siapakah .siapakah-kami h3 {
+    padding-top: 5%;
+    color: #F4F6FF;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.box-money {
+    width: 50%;
+    flex-grow: 1;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.total-akumulasi {
+    text-align: center;
+    display: block;
+    background-color: #F4F6FF;
+    border-radius: 20px;
+    backdrop-filter: blur(23px);
+    box-shadow: 5px 4px 27px rgba(0, 0, 0, 0.32);
+    background: rgba(255, 255, 255, 0.973);
+    width: auto;
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+}
+
+.total-akumulasi:hover {
+    background-color: #087C37;
+    color: #F4F6FF;
+}
+
+
+.total-akumulasi h2 {
+    color: #087C37;
+    font-size: 20px;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.total-akumulasi:hover h2 {
+    color: #F4F6FF;
+}
+
+.total-peminjam {
+    text-align: center;
+    display: block;
+    background-color: #F4F6FF;
+    border-radius: 20px;
+    backdrop-filter: blur(23px);
+    box-shadow: 5px 4px 27px rgba(0, 0, 0, 0.32);
+    background: rgba(255, 255, 255, 0.973);
+    /* width: 100%; */
+    height: 20%;
+    margin: 15px;
+    padding: 20px;
+}
+
+.total-peminjam h2 {
+    color: #087C37;
+    font-size: 20px;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+.total-penerima {
+    text-align: center;
+    display: block;
+    background-color: #F4F6FF;
+    border-radius: 20px;
+    backdrop-filter: blur(23px);
+    box-shadow: 5px 4px 27px rgba(0, 0, 0, 0.32);
+    background: rgba(255, 255, 255, 0.973);
+    /* width: 27%;
+    height: 20%; */
+    margin: 15px;
+    padding: 20px;
+}
+
+.total-penerima h2 {
+    color: #087C37;
+    font-size: 20px;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+.total-pinjaman {
+    text-align: center;
+    display: block;
+    background-color: #F4F6FF;
+    border-radius: 20px;
+    backdrop-filter: blur(23px);
+    box-shadow: 5px 4px 27px rgba(0, 0, 0, 0.32);
+    background: rgba(255, 255, 255, 0.973);
+    /* width: 27%;
+    height: 20%; */
+    margin: 15px;
+    padding: 20px;
+}
+
+.total-pinjaman h2 {
+    color: #087C37;
+    font-size: 20px;
+    font-weight: 700;
+    word-wrap: break-word
+}

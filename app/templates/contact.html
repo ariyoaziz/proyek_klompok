@@ -1,0 +1,293 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.min.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.min.css.map') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<title>{% block title %}KlikKredit | Contact {% endblock %}</title>
+
+{% block header %}
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/logo.png')}}" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #ffffff;" aria-current="page" href="/home">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Dana Tunai</a></li>
+                        <li><a class="dropdown-item" href="#">PayLeter</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" style="color: #ffffff">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" type="button" id="dropdownMenu2"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Company
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><a class="dropdown-item" href="/about" type="button">About Us</a></li>
+                        <li><a class="dropdown-item" href="/contact" type="button">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" style="color: #000000">
+                    <a class="nav-link" href="/faq" style="color: #000000;" id="faq-link">FAQ</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <div class="d-flex align-items-center">
+                    <button type="button" class="btn px-3 me-2 text-light">
+                        Login
+                    </button>
+                    <button type="button" class="btn btn-warning me-3 rounded-4">
+                        Open An Account
+                    </button>
+                </div>
+            </ul>
+        </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<!-- Kontak TOP -->
+<div class=" contact container mt-5">
+    <h2 style="margin-top: 150px;">Contact</h2>
+    <p style="font-size:25px;">Bagaimana kami dapat mendukung</br> Anda dan bisnis Anda?</p>
+</div>
+<div class="bg-light rounded-top-4 shadow mt-5">
+    <p class="text-light display-6">Sepasi</p>
+    <div class="content-contact container">
+        <div class="row">
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-6">
+                <h5>Hubungi Kami</h5>
+                <h3 class="mt-4">Pakar kami dpat membantu anda</h3>
+                <p>Kirimkan pesan kepada kami, dan seseorang dari tim kami akan segera
+                    menghubungi Anda.</p>
+            </div>
+
+            <div class="row col">
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card text-bg-light rounded-4 shadow" style="max-width: 90%;">
+                        <div class="card-body">
+                            <i class="fa-regular fa-message fa-2x text-success"></i>
+                            <h5 class="card-title mt-2">Customer Success</h5>
+                            <p class="card-text">Hubungi dukungan produk, pemecahan masalah, dan pertanyaan umum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card text-bg-light rounded-4 shadow" style="max-width: 90%;">
+                        <div class="card-body">
+                            <i class="fa-brands fa-servicestack fa-2x text-success"></i>
+                            <h5 class="card-title mt-2">Layanan</h5>
+                            <p class="card-text">Cari tahu bagaimana kami dapat melayani kebutuhan anda.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card text-bg-light rounded-4 shadow" style="max-width: 90%;">
+                        <div class="card-body">
+                            <i class="fa-solid fa-handshake fa-2x text-success"></i>
+                            <h5 class="card-title mt-2">Kemitraan</h5>
+                            <p class="card-text">Integrasi, solusi tertanam untuk penyedia layanan dan lembaga keuangan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card text-bg-light rounded-4 shadow" style="max-width: 90%;">
+                        <div class="card-body">
+                            <i class="fa-brands fa-slack fa-2x text-success"></i>
+                            <h5 class="card-title mt-2">Keuntungan</h5>
+                            <p class="card-text">Manfaatkan kekuatan KlikKredit unutk jaringan Anda. Ayo bicara!.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card text-bg-light rounded-4 shadow" style="max-width: 90%;">
+                        <div class="card-body">
+                            <i class="fa-solid fa-envelope-open-text fa-2x text-success"></i>
+                            <h5 class="card-title mt-2">Kemitraan Konten</h5>
+                            <p class="card-text">Terhubung dengan kami untuk peluang pemasaran bersama dan blogging
+                                tamu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card text-bg-light rounded-4 shadow" style="max-width: 90%;">
+                        <div class="card-body">
+                            <i class="fa-solid fa-microphone fa-2x text-success"></i>
+                            <h5 class="card-title mt-2">Peluang Humas</h5>
+                            <p class="card-text">Terhubung dengan kami untuk peluang media, acara, dan publikasi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kontak From -->
+        <div class="from row mt-6 border-top border-tertiary" style="margin-top: 75px;">
+            <div class="col-12 col-md-6 mt-5">
+                <h5>Get in Touch</h5>
+                <h3 class="mt-4">Kami sangat mudah didekati dan ingin berbicara dengan Anda.</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book.</p>
+
+                <h5 class="mt-4">Terhubung dengan Kami</h5>
+                <ul class="list-unstyled d-flex ms-auto align-items-center mb-0 mt-3">
+                    <li><a href="twitter.com"><i class="fa-solid fa-phone  text-success me-3"></i></a></li>
+                    <li><a href="twitter.com"><i class="fa-solid fa-envelope text-success me-3"></i></a></li>
+                    <li><a href="twitter.com"><i class="fa-brands fa-x-twitter text-success me-3"></i></a></li>
+                    <li><a href="twitter.com"><i class="fa-brands fa-instagram text-success me-3"></i></a></li>
+                    <li><a href="twitter.com"><i class="fa-brands fa-facebook text-success me-3"></i></a></li>
+                    <li><a href="twitter.com"><i class="fa-brands fa-linkedin text-success me-3"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 mt-5">
+                <form>
+                    <div class="row g-3">
+                        <div class="col my-3">
+                            <input type="text" class="form-control rounded-4" placeholder="First name"
+                                aria-label="First name">
+                        </div>
+                        <div class="col my-3">
+                            <input type="text" class="form-control rounded-4" placeholder="Last name"
+                                aria-label="Last name">
+                        </div>
+                    </div>
+                    <div class="col my-3">
+                        <input type="email" class="form-control rounded-4" placeholder="Email" aria-label="Email">
+                    </div>
+                    <div class="col my-3">
+                        <input type="file" class="form-control rounded-4" id="image">
+                    </div>
+                    <div class="col my-3">
+                        <textarea class="form-control rounded-4" style="width: 100%; height: 200px"
+                            placeholder="Chat box" aria-label="Chat box"></textarea>
+                    </div>
+                    <div class="col my-3">
+                        <button type="submit" class="btn btn-warning rounded-4 shadow"
+                            style="width: 30%; height: 40px">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block footer %}
+    <!-- Foother -->
+    <div class="footer">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5 class="text-light">Services</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Dana Tunai</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">PayLeter</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5 class="text-light">Compeny</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">About Us</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5 class="text-light">FAQ</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Membuat
+                                    akun</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Pendanaan</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Dana Tunia</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">PayLeter</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form>
+                            <h5 class="text-warning">Subscribe to our newsletter</h5>
+                            <p class="text-secondary">Monthly digest of what's new and exciting from us.</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email address</label>
+                                <input id="newsletter1" type="text" class="form-control rounded-4"
+                                    placeholder="Email address">
+                                <button class="btn btn-warning rounded-4" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between py-4 my-5 border-top border-secondary text-secondary">
+                    <div class="d-flex align-items-center">
+                        <img src="{{ url_for('static', filename='img/logo.png')}}" alt="" width="130" height="50">
+                    </div>
+                    <div class="col text-center">
+                        <p class="mb-0">&copy; 2023 Company, Inc. All rights reserved.</p>
+                    </div>
+                    <ul class="list-unstyled d-flex ms-auto align-items-center mb-0">
+                        <li class="me-3"><a href="twitter.com"><i class="fa-brands fa-x-twitter text-secondary"></i></a>
+                        </li>
+                        <li class="me-3"><a href="twitter.com"><i class="fa-brands fa-instagram text-secondary"></i></a>
+                        </li>
+                        <li class="me-3"><a href="twitter.com"><i class="fa-brands fa-facebook text-secondary"></i></a>
+                        </li>
+                        <li><a href="twitter.com"><i class="fa-brands fa-linkedin text-secondary"></i></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js.map') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js.map') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js.map') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js.map') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+body{
+    font-family: poppins;
+    /* background-image: url("../img/bg.png"); */
+    background-color: #F5F5DC;
+}
+/* navbar */
+nav{
+    background-color: #087c37;
+}
+/* ---------------------------------About Us---------------------------------------- */
+/* bg */
+div .bg-light .rounded-top-4 .shadow mt-5{
+    margin-top: 150px;
+}
+/* Kontak konten */
+div .contact .container .mt-5{
+    margin-top: 100px;
+}
+div .content-contact .container p{
+    font-size: 20px;
+}
+/* footer */
+div .footer{
+    background-color: #1E1E1E; 
+    margin-top: 80px;
+}
+
+/* ---------------------------------contact---------------------------------------- */
+
+/* bg */
+div .bg-light .rounded-top-4 .shadow mt-5{
+    margin-top: 150px;
+}
+/* Kontak konten */
+.contact .container .mt-5 h2{
+    margin-top: 100px;
+}
+div .content-contact .container p{
+    font-size: 20px;
+}
+/* footer */
+div .footer{
+    background-color: #1E1E1E; 
+    margin-top: 80px;
+}

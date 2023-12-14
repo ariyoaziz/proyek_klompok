@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>{% block title %}Klik Kredit{% endblock %}</title>
+</head>
+
+<body>
+  {% block header %}
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/logo.png')}}" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #ffffff;" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Dana Tunai</a></li>
+              <li><a class="dropdown-item" href="#">PayLeter</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" style="color: #ffffff">
+            <a class="nav-link dropdown-toggle" href="#" role="button" type="button" id="dropdownMenu2"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Company
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><a class="dropdown-item" href="#" type="button">About Us</a></li>
+              <li><a class="dropdown-item" href="#" type="button">Contact</a></li>
+            </ul>
+          </li>
+          <li class="nav-item" style="color: #ffffff">
+            <a class="nav-link" href="#FAQ" id="faq-link">FAQ</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <li class="nav-item">
+          <a class="nav-link-login" style="color: #ffffff" href="#">Login</a>
+        </li>
+        <a class="btn" style="background-color: #F3C623;" href="#" role="button">Open an Account</a>
+      </div>
+    </div>
+  </nav>
+  {% endblock %}
+
+  {% block main %}
+  <main>
+    <div class="background-hero">
+      <section class="hero-section">
+        <div class="container">
+          <img class="image-hero" src="{{ url_for('static', filename='img/gambar-hero.png')}}" alt="">
+          <div class="content">
+            <h2>Nikmati Hidup Mudah <br>Dengan KlikKredit<img
+                src="{{ url_for('static', filename='img/img-tameng2.png')}}" class="content-icon" alt="">
+            </h2>
+          </div>
+          <div class="text">
+            <span class="text-kredit">KlikKredit </span><span class="text-kk-isi">adalah Layanan Pendanaan Bersama
+              Berbasis Teknologi
+              <br>Informasi terkemuka yang sudah berizin dan diawasi oleh Otoritas
+              <br>Jasa Keuangan (OJK). Kami menghubungkan langsung antara
+              <br>Pemberi Dana dan Penerima Dana lewat platform online.</span>
+          </div>
+          <div class="hero-btn">
+            <button class="hero-btn-login" href="#">Login</button>
+            <button class="hero-btn-signup" href="">Sign Up</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="hero-box">
+        <section class="sect-box">
+          <div class="container">
+
+            <div class="hero-siapakah">
+              <div class="siapakah-kami">
+                <h2>Siapakah Kami?</h2>
+                <h3>Sebagai Layanan Pendanaan Bersama Berbasis Teknologi
+                  <br>Informasi yang berizin dan diawasi OJK, kami berusaha
+                  <br>keras untuk menyediakan layanan terbaik serta
+                  <br>menghubungkan Pemberi Dana dan Penerima Dana lewat
+                  <br>KlikKredit. Kami juga ingin memberikan kontribusi dalam
+                  <br>pengembangan ekonomi digital di Indonesia.
+                </h3>
+              </div>
+            
+
+              <div class="box-money">
+                <div class="total-akumulasi">
+                  <h2>4.556.227</h2>
+                  <p>Total akumulasi Penerima Dana</p>
+                </div>
+
+                <div class="total-peminjam">
+                  <h2>Rp 34,02 Triliun</h2>
+                  <p>Total peminjaman akumulatif berdiri</p>
+                </div>
+
+                <div class="total-penerima">
+                  <h2>4.556.227</h2>
+                  <p>Jumlah Penerima Dana aktif</p>
+                </div>
+                <div class="total-pinjaman">
+                  <h2>Rp 20,02 Triliun</h2>
+                  <p>Total Pinjaman Terutang</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </section>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </main>
+  {% endblock %}
+
+
+
+
+
+  <div class="container mt-5">
+    {% block content %}{% endblock %}
+  </div>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var faqLink = document.getElementById("faq-link");
+      faqLink.style.color = "white";
+    });
+  </script>
+
+  <script>
+    const button = document.getElementById('.hero-btn-login');
+
+    button.addEventListener('click', () => {
+      button.classList.add('clicked');
+    });
+
+    button.addEventListener('mouseenter', () => {
+      button.classList.remove('clicked');
+    });
+  </script>
+
+
+</body>
+
+</html>

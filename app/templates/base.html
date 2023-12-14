@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css.map') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css.map') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.css.map') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.min.css.map') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.css.map') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.min.css.map') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>{% block title %}Klik Kredit{% endblock %}</title>
+</head>
+
+<body>
+  {% block header %}
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/logo.png')}}" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #ffffff;" aria-current="page" href="/home">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Dana Tunai</a></li>
+              <li><a class="dropdown-item" href="#">PayLeter</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" style="color: #ffffff">
+            <a class="nav-link dropdown-toggle" href="#" role="button" type="button" id="dropdownMenu2"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Company
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><a class="dropdown-item" href="/about" type="button">About Us</a></li>
+              <li><a class="dropdown-item" href="/contact" type="button">Contact</a></li>
+            </ul>
+          </li>
+          <li class="nav-item" style="color: #000000">
+            <a class="nav-link" href="/faq" style="color: #000000;" id="faq-link">FAQ</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <div class="d-flex align-items-center">
+            <button type="button" class="btn px-3 me-2 text-light">
+              Login
+            </button>
+            <button type="button" class="btn btn-warning me-3 rounded-4">
+              Open An Account
+            </button>
+          </div>
+        </ul>
+      </div>
+  </nav>
+  {% endblock %}
+
+  {% block main %}
+  <main>
+    <div class="background-hero">
+      <section class="hero-section">
+        <div class="container">
+          <img class="image-hero" src="{{ url_for('static', filename='img/Gambar hero.png')}}" alt="">
+          <div class="content">
+            <h2>Nikmati Hidup Mudah <br>Dengan KlikKredit<img
+                src="{{ url_for('static', filename='img/img-tameng2.png')}}" class="content-icon" alt="">
+            </h2>
+          </div>
+          <div class="text">
+            <span class="text-kredit">KlikKredit </span><span class="text-kk-isi">adalah Layanan Pendanaan Bersama
+              Berbasis Teknologi
+              <br>Informasi terkemuka yang sudah berizin dan diawasi oleh Otoritas
+              <br>Jasa Keuangan (OJK). Kami menghubungkan langsung antara
+              <br>Pemberi Dana dan Penerima Dana lewat platform online.</span>
+          </div>
+          <div class="hero-btn">
+            <button class="hero-btn-login" href="#">Login</button>
+            <button class="hero-btn-signup" href="">Sign Up</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="hero-box">
+        <section class="sect-box">
+
+          <div class="hero-siapakah">
+            <div class="siapakah-kami">
+              <h2>Siapakah Kami?</h2>
+              <h3>Sebagai Layanan Pendanaan Bersama Berbasis Teknologi
+                <br>Informasi yang berizin dan diawasi OJK, kami berusaha
+                <br>keras untuk menyediakan layanan terbaik serta
+                <br>menghubungkan Pemberi Dana dan Penerima Dana lewat
+                <br>KlikKredit. Kami juga ingin memberikan kontribusi dalam
+                <br>pengembangan ekonomi digital di Indonesia.
+              </h3>
+            </div>
+
+
+            <div class="hero-box-money">
+              <div>
+                <p><span>4.556.227</span>
+                  <br>Total akumulasi Penerima Dana
+                </p>
+              </div>
+
+              <div>
+                <p><span>Rp 34,02 Triliun</span>
+                  <br>Total peminjaman akumulatif berdiri
+                </p>
+              </div>
+
+              <div>
+                <p><span>4.556.227</span>
+                  <br>Jumlah Penerima Dana aktif
+                </p>
+              </div>
+
+              <div>
+                <p><span>Rp 20,02 Triliun</span>
+                  <br>Total Pinjaman Terutang
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <div class="box-mengapa-kami">
+          <div class="hero-mengapa-kami">
+
+            <div class="mengapa-kami">
+              <h2>Mengapa Memilih Kami?</h2>
+            </div>
+
+          </div>
+
+          <div class="hero-mengapa-keamanan">
+            <div>
+              <img src="{{ url_for('static', filename='img/icon-mengapa-1.png')}}" class="hero-icon-keamanan" alt="">
+              <h2>Berizin dan Diawasi oleh
+                <br>OJK
+              </h2>
+              <p>Kami sudah berizin dan
+                <br>diawasi oleh OJK
+              </p>
+            </div>
+
+
+            <div>
+              <img src="{{ url_for('static', filename='img/icon-mengapa-2.png')}}" class="hero-icon-keamanan" alt="">
+              <h2>Angota dari AFPI</h2>
+              <p>Kami adalah anggota dari
+                <br>AFPI (Asosiasi Fintech
+                <br>Pendanaan bersama
+                <br>Indonesia)
+              </p>
+            </div>
+
+
+            <div>
+              <img src="{{ url_for('static', filename='img/icon-mengapa-3.png')}}" class="hero-icon-keamanan" alt="">
+              <h2>Pengendalian Resiko AI</h2>
+              <p>Sistem pengembangan resiko
+                <br>yang dikembangkan sendiri
+                <br>berbasis kecerdasan buatan
+                <br>dan big data
+              </p>
+            </div>
+
+
+            <div>
+              <img src="{{ url_for('static', filename='img/icon-mengapa-4.png')}}" class="hero-icon-keamanan" alt="">
+              <h2>Keamanan Tingkat
+                <br>Tinggi dan Resiko Rendah
+              </h2>
+              <p>Dana disimpan dalam
+                <br>rekening Escrow yang sudah
+                <br>memenuhi persyaratan
+                <br>sertifikasi ISO
+              </p>
+            </div>
+
+          </div>
+
+          <div class="hero-layanan-kami">
+            <div class="layanan-kami">
+              <h2>Layanan Kami</h2>
+            </div>
+
+            <div class="background-layanan">
+              <div class="card-layanan-kami">
+                <img class="hero-icon-layanan" src="{{ url_for('static', filename='img/img-layanan kami.png')}}" alt="">
+                <div class="judul-layanan">
+                  <h2>Layanan Pinjaman</h2>
+
+                  <div class="isi-layanan">
+
+                    <div class="isi-column">
+                      <p>
+                      <h3>Mudah</h3>
+                      Pengajuan pinjaman mudah</p>
+                    </div>
+
+                    <div class="isi-column">
+                      <p>
+                      <h3>Cepat</h3>
+                      Proses Peminjaman dalam 3 menit</p>
+                    </div>
+                  </div>
+
+                  <div class="isi-layanan">
+                    <div class="isi-column">
+                      <p>
+                      <h3>Limit Besar</h3>
+                      Batas Maksimum sebauh Pinjaman bisa
+                      <br>mencapai 50 juta rupiah</p>
+                    </div>
+
+                    <div class="isi-column">
+                      <p>
+                      <h3>Bunga Rendah</h3>
+                      Suku bunga maksimum tidak lebih dari 0,5%</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="background-layanan2">
+              <div class="card-layanan-kami2">
+
+                <div class="judul-layanan2">
+                  <h2>Layanan Pendanaan</h2>
+
+                  <div class="isi-layanan2">
+
+                    <div class="isi-column2">
+                      <p>
+                      <h3>Mudah</h3>
+                      Pengajuan pinjaman mudah</p>
+                    </div>
+
+                    <div class="isi-column2">
+                      <p>
+                      <h3>Cepat</h3>
+                      Proses Peminjaman dalam 3 menit</p>
+                    </div>
+                  </div>
+
+                  <div class="isi-layanan2">
+                    <div class="isi-column2">
+                      <p>
+                      <h3>Limit Besar</h3>
+                      Batas Maksimum sebauh Pinjaman bisa
+                      <br>mencapai 50 juta rupiah</p>
+                    </div>
+
+                    <div class="isi-column2">
+                      <p>
+                      <h3>Bunga Rendah</h3>
+                      Suku bunga maksimum tidak lebih dari 0,5%</p>
+                    </div>
+
+                  </div>
+
+                </div>
+                <img class="hero-icon-layanan2" src="{{ url_for('static', filename='img/img-layanan kami.png')}}"
+                  alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-testimoni">
+          <div class="background-testimoni">
+            <div class="testimoni-pengguna">
+              <h2>Testimoni Pengguna</h2>
+            </div>
+
+            <div class="testimoni-pengguna-burhan">
+              <div class="testimoni-display">
+                <div class="testimoni-foto-text">
+                  <img class="icon-pengguna" src="{{ url_for('static', filename='img/burhan.png')}}" alt="">
+                  <div class="testimoni-content">
+                    <h2>Burhan
+                      <div class="rating-pengguna">
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                      </div>
+                    </h2>
+                    <p>Terimakasih Klik Kredit Telah Membantu Saya.</p>
+                  </div>
+                </div>
+
+                <div class="testimoni-foto-text">
+                  <img class="icon-pengguna" src="{{ url_for('static', filename='img/seyna.png')}}" alt="">
+                  <div class="testimoni-content">
+                    <h2>Seyna
+                      <div class="rating-pengguna">
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                      </div>
+                    </h2>
+                    <p>Terimakasih Klik Kredit Telah Membantu Saya.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="hero-mitra">
+          <div class="mitra">
+            <h2>Mitra</h2>
+          </div>
+          <div class="icon-mitra">
+            <img class="icon-mitra1" src="{{ url_for('static', filename='img/mitra-1.png')}}" alt="">
+            <img class="icon-mitra1" src="{{ url_for('static', filename='img/mitra-2.png')}}" alt="">
+            <img class="icon-mitra1" src="{{ url_for('static', filename='img/mitra-3.png')}}" alt="">
+            <img class="icon-mitra1" src="{{ url_for('static', filename='img/mitra-4.png')}}" alt="">
+            <img class="icon-mitra1" src="{{ url_for('static', filename='img/mitra-5.png')}}" alt="">
+          </div>
+        </div>
+
+        <div class="hero-regulator">
+          <div class="regulator">
+            <h2>Regulator</h2>
+          </div>
+          <div class="icon-regulator">
+            <img class="icon-regulator1" src="{{ url_for('static', filename='img/regulator-1.png')}}" alt="">
+            <img class="icon-regulator1" src="{{ url_for('static', filename='img/regulator-2.png')}}" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      {% block footer %}
+      <!-- Foother -->
+      <div class="footer">
+        <div class="container">
+          <footer class="py-5">
+            <div class="row">
+              <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-light">Services</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Dana Tunai</a>
+                  </li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">PayLeter</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-light">Compeny</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">About Us</a>
+                  </li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-light">FAQ</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Membuat
+                      akun</a>
+                  </li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Pendanaan</a>
+                  </li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Dana Tunia</a>
+                  </li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">PayLeter</a>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                  <h5 class="text-warning">Subscribe to our newsletter</h5>
+                  <p class="text-secondary">Monthly digest of what's new and exciting from us.</p>
+                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control rounded-4" placeholder="Email address">
+                    <button class="btn btn-warning rounded-4" type="button">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 my-5 border-top border-secondary text-secondary">
+              <div class="d-flex align-items-center">
+                <img src="{{ url_for('static', filename='img/logo.png')}}" alt="" width="130" height="50">
+              </div>
+              <div class="col text-center">
+                <p class="mb-0">&copy; 2023 Company, Inc. All rights reserved.</p>
+              </div>
+              <ul class="list-unstyled d-flex ms-auto align-items-center mb-0">
+                <li class="me-3"><a href="twitter.com"><i class="fa-brands fa-x-twitter text-secondary"></i></a>
+                </li>
+                <li class="me-3"><a href="twitter.com"><i class="fa-brands fa-instagram text-secondary"></i></a>
+                </li>
+                <li class="me-3"><a href="twitter.com"><i class="fa-brands fa-facebook text-secondary"></i></a>
+                </li>
+                <li><a href="twitter.com"><i class="fa-brands fa-linkedin text-secondary"></i></a></li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </main>
+  {% endblock %}
+
+
+
+
+
+  <div class="container mt-5">
+    {% block content %}{% endblock %}
+  </div>
+  <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.js.map') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js.map') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.js.map') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js.map') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var faqLink = document.getElementById("faq-link");
+      faqLink.style.color = "white";
+    });
+  </script>
+
+  <script>
+    const button = document.getElementById('.hero-btn-login');
+
+    button.addEventListener('click', () => {
+      button.classList.add('clicked');
+    });
+
+    button.addEventListener('mouseenter', () => {
+      button.classList.remove('clicked');
+    });
+  </script>
+
+
+</body>
+
+</html>

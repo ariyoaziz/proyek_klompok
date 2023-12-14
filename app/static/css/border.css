@@ -1,0 +1,162 @@
+.main-container {
+    width: 1512px;
+    height: 567px;
+    position: relative;
+}
+.background-layer {
+    width: 1512px;
+    height: 567px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: black;
+}
+.image {
+    left: 0px;
+    top: 9px;
+    position: absolute;
+}
+.white-layer {
+    width: 49px;
+    height: 41px;
+    left: 202px;
+    top: 453px;
+    position: absolute;
+}
+.follow-us-text {
+    width: 203px;
+    height: 63px;
+    left: 44px;
+    top: 372px;
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    font-family: Poppins;
+    font-weight: 400;
+    letter-spacing: 1.12px;
+    word-wrap: break-word;
+}
+.small-black-layer {
+    width: 630px;
+    height: 142px;
+    left: 18px;
+    top: 214px;
+    position: absolute;
+    background: #020202;
+}
+.diagonal-line {
+    width: 73.03px;
+    height: 0px;
+    left: 2px;
+    top: 13px;
+    position: absolute;
+    transform: rotate(91.57deg);
+    transform-origin: 0 0;
+    border: 1px black solid;
+}
+.phone-number {
+    width: 203px;
+    height: 66px;
+    left: 72px;
+    top: 60px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 400;
+    letter-spacing: 0.80px;
+    word-wrap: break-word;
+}
+
+.small-white-box {
+    left: 16.58px;
+    top: 61.29px;
+    position: absolute;
+}
+.email-text {
+    width: 258px;
+    height: 40px;
+    left: 275px;
+    top: 58px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 400;
+    letter-spacing: 0.80px;
+    word-wrap: break-word;
+}
+
+.small-blue-box {
+    left: 220px;
+    top: 58px;
+    position: absolute;
+}
+.contact-us-text {
+    left: 551px;
+    top: 30px;
+    position: absolute;
+    color: white;
+    font-size: 36px;
+    font-family: Poppins;
+    font-weight: 700;
+    letter-spacing: 1.44px;
+    word-wrap: break-word;
+}
+.color-layer {
+    left: 66px;
+    top: 451px;
+    position: absolute;
+}
+.first-blue-layer {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+.white-circle {
+    width: 25.49px;
+    height: 22.99px;
+    left: 12.75px;
+    top: 11.50px;
+    position: absolute;
+}
+.yellow {
+    left: 80px;
+    top: 10%;
+    position: absolute;
+}
+.layer {
+    left: 160px;
+    top: 10%;
+    position: absolute
+}
+.second {
+    width: 24.05px;
+    height: 23.55px;
+    left: 12px;
+    top: 11.75px;
+    position: absolute;
+}
+.loan-text {
+    width: 203px;
+    height: 63px;
+    left: 81px;
+    top: 159px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 400;
+    letter-spacing: 0.80px;
+    word-wrap: break-word;
+}
+.vertical-line {
+    width: 64px;
+    height: 0px;
+    left: 33px;
+    top: 149px;
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+    border: 1px #00DD31 solid;
+}
