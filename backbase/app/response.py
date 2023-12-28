@@ -1,16 +1,16 @@
 from flask import jsonify, make_response
 
-def ok(values, massage):
+def ok(values, message):
     res={
         'values' : values,
-        'massage' : massage
+        'message' : message
     }
 
     return make_response(jsonify(res)),200
 
-def badRequest(values, massage):
+def badRequest(values, message):
     res={
         'values' : values,
-        'massage' : massage
+        'message' : message
     }
     return make_response(jsonify(res)),400

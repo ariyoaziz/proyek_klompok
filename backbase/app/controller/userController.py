@@ -3,6 +3,7 @@ from app import response, app,db
 from flask import request
 
 
+
 def index():
     try:
         user = User.query.all()
@@ -45,14 +46,15 @@ def singleTransfrom(users):
 
 def store():
     try:
+        id = request.json['id']
         name = request.json['name']
         email = request.json['email']
-        password = request.json['password']
         phone = request.json['phone']
+        password = request.json['password']
 
-        users = User(name=name, email=email, phone=phone)
-        users.setPassword(password)
-        db.session.add(users)
+        user = User(id=id, name=name, email=email, phone=phone)
+        user.setPassword(password)
+        db.session.add(user)
         db.session.commit()
 
         return response.ok('', 'Successfully Create data!')
@@ -61,19 +63,19 @@ def store():
         print(e)
 
 def update(id):
-    try: 
+    try:
         name = request.json['name']
         email = request.json['email']
-        password = request.json['password']
         phone = request.json['phone']
+        password = request.json['password']
 
-        user = User.query.filter_by(id=id).first()
-        user.name = name
-        user.email = email
-        phone.phone = phone
+        users = User.query.filter_by(id=id).first()
+        users.name = name
+        users.email = email
+        users.phone = phone
 
-        user.setPassword(password)
-
+        users.setPassword(password)
+        
         db.session.commit()
 
         return response.ok ('', 'Successfully update data!')
@@ -81,7 +83,7 @@ def update(id):
     except Exception as e:
         print(e)
 
-def delate (id):
+def delete (id):
     try:
         user = User.query.filter_by(id=id).first()
 
@@ -89,8 +91,9 @@ def delate (id):
             return response.badRequest([], 'Empty...')
 
         db.session.delete(user)
+        db.session.commit()
 
-        return response.ok ('', 'Successfully update data!')
+        return response.ok ('', 'Successfully delete data!')
     
     except Exception as e:
         print(e)
