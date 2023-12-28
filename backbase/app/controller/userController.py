@@ -43,6 +43,78 @@ def singleTransfrom(users):
 
     return data
 
-def stord():
+def store():
     try:
         name = request.json['name']
+        email = request.json['email']
+        password = request.json['password']
+        phone = request.json['phone']
+
+        users = User(name=name, email=email, phone=phone)
+        users.setPassword(password)
+        db.session.add(users)
+        db.session.commit()
+
+        return response.ok('', 'Successfully Create data!')
+    
+    except Exception as e:
+        print(e)
+
+def update(id):
+    try: 
+        name = request.json['name']
+        email = request.json['email']
+        password = request.json['password']
+        phone = request.json['phone']
+
+        user = User.query.filter_by(id=id).first()
+        user.name = name
+        user.email = email
+        phone.phone = phone
+
+        user.setPassword(password)
+
+        db.session.commit()
+
+        return response.ok ('', 'Successfully update data!')
+    
+    except Exception as e:
+        print(e)
+
+def delate (id):
+    try:
+        user = User.query.filter_by(id=id).first()
+
+        if not user:
+            return response.badRequest([], 'Empty...')
+
+        db.session.delete(user)
+
+        return response.ok ('', 'Successfully update data!')
+    
+    except Exception as e:
+        print(e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

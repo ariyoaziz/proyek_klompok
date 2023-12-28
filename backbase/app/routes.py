@@ -3,11 +3,21 @@ from app import app
 from app.controller import userController
 from flask import request
 
-@app.route("/user")
+
+@app.route('/user', methods=['GET', 'POST'])
 def users():
-    return userController.index()
+    if request.method == 'GET':
+        return userController.index()
+    else:
+        return userController.store()
 
-
+@app.route('/user/<int:id>', methods=['GET', 'PUT', 'DELETE'])
 def usersDetail(id):
-    print(id)
-    return userController.show(id)
+    if request.method == 'GET':
+        return userController.show(id)
+    elif request.method == 'PUT':
+        return userController.update(id)
+    elif request.method == 'DELETE':
+        return userController.delete(id)
+
+
