@@ -11,6 +11,6 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 
-from app.model import user,payment,loan
+from app.model import user, loan, payment
 
 from app import routes  # Mengimport routes setelah inisialisasi app dan db

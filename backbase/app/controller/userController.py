@@ -1,47 +1,44 @@
 from app.model.user import User
-from app import response, app,db
+from app import response, app, db
 from flask import request
-
-
 
 def index():
     try:
-        user = User.query.all()
-        data = transfrom (user)
-        return response.ok (data, "success")
+        users = User.query.all()
+        data = transform(users)
+        return response.ok(data, "success")
     except Exception as e:
-        print (e)
+        print(e)
 
-def transfrom(users):
+def transform(users):
     array = []
     for i in users:
         array.append({
-            'id' : i.id,
-            'name' : i.name,
-            'email' : i. email,
-            'phone' : i.phone
+            'id': i.id,
+            'name': i.name,
+            'email': i.email,
+            'phone': i.phone
         })
     return array
 
 def show(id):
     try:
-        users = User.query.filter_by(id=id).first()
-        if not users:
-            return response.badRequest([],'Empty....')
-        
-        data = singleTransfrom(users)
-        return response.ok(data,"")
+        user = User.query.filter_by(id=id).first()
+        if not user:
+            return response.badRequest([], 'Empty....')
+
+        data = singleTransform(user)
+        return response.ok(data, "")
     except Exception as e:
         print(e)
 
-def singleTransfrom(users):
-    data ={
-        'id' : users.id,
-        'name' : users.name,
-        'email' : users.email,
-        'phone' : users.phone
+def singleTransform(user):
+    data = {
+        'id': user.id,
+        'name': user.name,
+        'email': user.email,
+        'phone': user.phone
     }
-
     return data
 
 def store():
@@ -57,8 +54,7 @@ def store():
         db.session.add(user)
         db.session.commit()
 
-        return response.ok('', 'Successfully Create data!')
-    
+        return response.ok('', 'Successfully create data!')
     except Exception as e:
         print(e)
 
@@ -69,21 +65,22 @@ def update(id):
         phone = request.json['phone']
         password = request.json['password']
 
-        users = User.query.filter_by(id=id).first()
-        users.name = name
-        users.email = email
-        users.phone = phone
+        user = User.query.filter_by(id=id).first()
+        if not user:
+            return response.badRequest([], 'Empty....')
 
-        users.setPassword(password)
-        
+        user.name = name
+        user.email = email
+        user.phone = phone
+        user.setPassword(password)
+
         db.session.commit()
 
-        return response.ok ('', 'Successfully update data!')
-    
+        return response.ok('', 'Successfully update data!')
     except Exception as e:
         print(e)
 
-def delete (id):
+def delete(id):
     try:
         user = User.query.filter_by(id=id).first()
 
@@ -93,31 +90,24 @@ def delete (id):
         db.session.delete(user)
         db.session.commit()
 
-        return response.ok ('', 'Successfully delete data!')
-    
+        return response.ok('', 'Successfully delete data!')
     except Exception as e:
         print(e)
 
+def login():
+    try:
+        email = request.json['email']
+        password = request.json['password']
 
+        user = User.query.filter_by(email=email).first()
+        if not user:
+            return response.badRequest([], 'Empty....')
 
+        if not user.checkPassword(password):
+            return response.badRequest([], 'Invalid credentials')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        data = singleTransform(user)
+        return response.ok(data, "")
+    except Exception as e:
+        print(e)
 

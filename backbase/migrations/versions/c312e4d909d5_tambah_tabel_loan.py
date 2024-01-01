@@ -1,8 +1,8 @@
-"""create tabel payment
+"""tambah tabel loan
 
-Revision ID: 7cc3c5a5ecb1
+Revision ID: c312e4d909d5
 Revises: d2cab90e093c
-Create Date: 2023-12-14 13:24:19.390884
+Create Date: 2023-12-31 16:18:16.977572
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '7cc3c5a5ecb1'
+revision = 'c312e4d909d5'
 down_revision = 'd2cab90e093c'
 branch_labels = None
 depends_on = None
@@ -22,8 +22,10 @@ def upgrade():
     sa.Column('loan_id', sa.BigInteger(), autoincrement=True, nullable=False),
     sa.Column('user_id', sa.BigInteger(), nullable=True),
     sa.Column('jumlah_pinjaman', sa.Float(), nullable=False),
+    sa.Column('jangka_waktu_peminjaman', sa.Integer(), nullable=False),
     sa.Column('tanggal_pinjaman', sa.DateTime(), nullable=True),
     sa.Column('tanggal_jatuh_tempo', sa.DateTime(), nullable=False),
+    sa.Column('tanggal_pembayaran_per_bulan', sa.DateTime(), nullable=False),
     sa.Column('status_pinjaman', sa.String(length=50), nullable=False),
     sa.Column('bunga_pinjaman', sa.Float(), nullable=False),
     sa.Column('total_pembayaran', sa.Float(), nullable=False),
