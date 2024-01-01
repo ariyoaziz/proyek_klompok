@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "d02c87be-1291-44e5-9e24-fd54eaf0274a",
+		"name": "loan(Peminjaman_online)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31504432"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/loan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/loan",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 22666231,\r\n    \"jumlah_pinjaman\": 30000000,\r\n    \"tanggal_jatuh_tempo\": \"\",\r\n    \"status_pinjaman\": \"peminjaman diterima\",\r\n    \"bunga_pinjaman\": 5,\r\n    \"total_pembayaran\": 31500000\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/loan",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/loan/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/loan/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"loan",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/loan/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 22666231,\r\n    \"jumlah_pinjaman\": 50000000,\r\n    \"tanggal_pinjaman\": \"2023-12-31T12:00:00\",\r\n    \"tanggal_jatuh_tempo\": \"2024-12-31T12:00:00\",\r\n    \"status_pinjaman\": \"Peminjaman diterima\",\r\n    \"bunga_pinjaman\": 5,\r\n    \"total_pembayaran\": 52500000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/loan/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"loan",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
