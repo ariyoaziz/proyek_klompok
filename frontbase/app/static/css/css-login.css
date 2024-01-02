@@ -1,0 +1,30 @@
+
+body {
+    background-image: url('/static/img/background.png');
+    background-size: cover;
+    background-attachment: fixed; 
+    height: 100vh;
+    margin: 0; 
+}
+
+.image-hero{
+    margin-top: 100px;
+    width: 500px;
+    height: auto;
+}
+.card{
+    background-color: #087C37;
+    
+}
+.card-body h5{
+    color: #F4F6FF;
+}
+.card-body h3{
+    color: #F3C623;
+}
+button{
+    background-color: #F3C623;
+}
+p{
+    color: #F4F6FF;
+}
