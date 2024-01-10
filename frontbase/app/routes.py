@@ -23,6 +23,10 @@ def about():
 def contact():
     return render_template('contact.html')
 
+@app.route("/service_danaTunai")
+def service_danaTunai():
+    return render_template('service_danaTunai.html')
+
 @app.route("/home")
 def home():
     return render_template('base.html')
