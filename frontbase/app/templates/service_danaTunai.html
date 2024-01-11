@@ -165,6 +165,95 @@
         </div>
 
     </div>
-    
+
+    {% block footer %}
+    <!-- Foother -->
+    <div class="footer" style="background-color: #1E1E1E; margin-top: 80px;">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5 class="text-light">Services</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Dana Tunai</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">PayLeter</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5 class="text-light">Compeny</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">About Us</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5 class="text-light">FAQ</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Membuat
+                                    akun</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Pendanaan</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Dana Tunia</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">PayLeter</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form>
+                            <h5 class="text-warning">Subscribe to our newsletter</h5>
+                            <p class="text-secondary">Monthly digest of what's new and exciting from us.</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email address</label>
+                                <input id="newsletter1" type="text" class="form-control rounded-4"
+                                    placeholder="Email address">
+                                <button class="btn btn-warning rounded-4" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between py-4 my-5 border-top border-secondary text-secondary">
+                    <div class="d-flex align-items-center">
+                        <img src="{{ url_for('static', filename='img/logo.png')}}" alt="" width="130" height="50">
+                    </div>
+                    <div class="col text-center">
+                        <p class="mb-0">&copy; 2024 Company, Inc. All rights reserved.</p>
+                    </div>
+                    <ul class="list-unstyled d-flex ms-auto align-items-center mb-0">
+                        <li class="me-3"><a href="twitter.com"><i class="fa-brands fa-x-twitter text-secondary"></i></a>
+                        </li>
+                        <li class="me-3"><a href="twitter.com"><i class="fa-brands fa-instagram text-secondary"></i></a>
+                        </li>
+                        <li class="me-3"><a href="twitter.com"><i class="fa-brands fa-facebook text-secondary"></i></a>
+                        </li>
+                        <li><a href="twitter.com"><i class="fa-brands fa-linkedin text-secondary"></i></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js.map') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js.map') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js.map') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js.map') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    </div>
+    {% endblock %}
+
 
 </body>
