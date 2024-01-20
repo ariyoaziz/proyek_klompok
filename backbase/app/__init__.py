@@ -1,6 +1,6 @@
 from flask import Flask
 # from app.model import loan, payment,user
-from config import Config
+from frontbase.config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 

@@ -52,6 +52,7 @@
                                 </svg> Login with facebook
                             </button>
                         </div>
+
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <hr class="my-4 text-light">
@@ -60,44 +61,54 @@
                                 <hr class="my-4 text-light">
                             </div>
                         </div>
-
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@gmail.com">
-                            <label for="floatingInput">
-                              <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
-                                <path
-                                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-                              </svg><span class="ms-2">Email address</span>
-                            </label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">
-                              <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
-                                <path
-                                  d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z" />
-                              </svg> <span class="ms-2">Password</span>
-                            </label>
-                          </div>
-
-                        <div class="row mt-2">
-                            <div class="col-md-6">
-                                <div class="form-check text-start my-2" style="font-size: 0.8rem;">
-                                    <input class="form-check-input" type="checkbox" value="remember-me"
-                                        id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        <p>Remember me</p>
-                                    </label>
+                        <form method="POST" action="/login">
+                            <div class="form-floating mb-3">
+                                <input type="email" id="email" name="email" class="form-control" id="floatingInput"
+                                    placeholder="name@gmail.com" class="form-control" required>
+                                <label for="floatingInput">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 512 512">
+                                        <path
+                                            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                                    </svg><span class="ms-2">Email address</span>
+                                </label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" id="password" name="password" class="form-control"
+                                    id="floatingPassword" placeholder="Password" class="form-control" required>
+                                <label for="floatingPassword">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 512 512">
+                                        <path
+                                            d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z" />
+                                    </svg> <span class="ms-2">Password</span>
+                                </label>
+                            </div>
+                            {% if error %}
+                            <div class="alert alert-danger" role="alert">
+                                {{ error }}
+                            </div>
+                            {% endif %}
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <div class="form-check text-start my-2" style="font-size: 0.8rem;">
+                                        <input class="form-check-input" type="checkbox" value="remember-me"
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            <p>Remember me</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-md-end mt-2">
+                                    <a href="#" class="text-decoration-none"
+                                        style="color: #F3C623; font-size: 0.8rem;">Forget Pasword ?</a>
                                 </div>
                             </div>
-                            <div class="col-md-6 text-md-end mt-2">
-                                <a href="#" class="text-decoration-none"
-                                    style="color: #F3C623; font-size: 0.8rem;">Forget Pasword ?</a>
-                            </div>
-                        </div>
-                        <a class="btn w-100"
-                            style="background-color: #F3C623; text-decoration: none; text-align: center; display: block;"
-                            href="/">Login</a>
+                            <button class="btn w-100"
+                                style="background-color: #F3C623; text-decoration: none; text-align: center; display: block;"
+                                type="submit">Login
+                            </button>
+                        </form>
 
                         <div class="text-regiter mt-3 text-center" style="font-size: 0.8rem">
                             <p>
